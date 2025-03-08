@@ -14,8 +14,10 @@ app.get('/', (c) => {
             <link rel="stylesheet" href="/static/style.css">
         </head>
         <body>
-            <div id="app"></div>
-            <script type="module" src="/static/main.js"></script>
+            // <div id="app"></div>
+            // <script type="module" src="/static/main.js"></script>
+            test,,,
+            <img src="/static/pgn.jpg" /> 
         </body>
         </html>
      `)
