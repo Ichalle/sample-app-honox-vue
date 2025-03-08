@@ -1,0 +1,26 @@
+{
+  "app/client.ts": {
+    "file": "static/client.js",
+    "name": "client",
+    "src": "app/client.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/honox/dist/client/runtime.js",
+      "node_modules/honox/dist/client/runtime.js"
+    ]
+  },
+  "node_modules/honox/dist/client/runtime.js": {
+    "file": "static/runtime.js",
+    "name": "runtime",
+    "src": "node_modules/honox/dist/client/runtime.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "app/client.ts"
+    ]
+  },
+  "static/style.css": {
+    "file": "static/style.css",
+    "src": "static/style.css",
+    "isEntry": true
+  }
+}
