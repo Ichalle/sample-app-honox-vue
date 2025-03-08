@@ -6,11 +6,11 @@ import adapter from '@hono/vite-dev-server/cloudflare'
 
 export default defineConfig({
   plugins: [
-    vue(), // Add Vue plugin
+    vue(), // Vue plugin for .vue files
     honox({
       devServer: { adapter },
       client: {
-        input: ['./static/style.css'],
+        input: ['./static/style.css'], // Ensure CSS is included
       },
     }),
     build(),
@@ -20,12 +20,12 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: true,
     minify: 'esbuild',
-    assetsDir: "",
+    assetsDir: "static", // ✅ Change this to store assets in `dist/static/`
     rollupOptions: {
       output: {
-        assetFileNames: "[name].[ext]",
-        chunkFileNames: "[name].js",
-        entryFileNames: "[name].js",
+        assetFileNames: "static/[name].[ext]", // ✅ Ensure assets go into `static/`
+        chunkFileNames: "static/[name].js",
+        entryFileNames: "static/[name].js",
       },
     },
   },
