@@ -12,5 +12,5 @@ var He=Object.defineProperty;var Xt=t=>{throw TypeError(t)};var Le=(t,e,r)=>e in
             <script type="module" src="/static/main.js"><\/script>
         </body>
         </html>
-     `));Vt.use("/static/*",Ge({root:"../static"}));const ie=new Ht,Nr=Object.assign({"/app/server.ts":Vt});let Fe=!1;for(const[,t]of Object.entries(Nr))t&&(ie.route("/",t),ie.notFound(e=>{let r;try{r=e.executionCtx}catch{}return t.fetch(e.req.raw,e.env,r)}),Fe=!0);if(!Fe)throw new Error("Can't import modules from ['/src/index.ts','/src/index.tsx','/app/server.ts']");export{ie as default};
+     `));Vt.use("/static/*",Ge({root:"./dist"}));const ie=new Ht,Nr=Object.assign({"/app/server.ts":Vt});let Fe=!1;for(const[,t]of Object.entries(Nr))t&&(ie.route("/",t),ie.notFound(e=>{let r;try{r=e.executionCtx}catch{}return t.fetch(e.req.raw,e.env,r)}),Fe=!0);if(!Fe)throw new Error("Can't import modules from ['/src/index.ts','/src/index.tsx','/app/server.ts']");export{ie as default};
 //# sourceMappingURL=index.js.map

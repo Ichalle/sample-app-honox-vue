@@ -26,7 +26,7 @@ app.get('/', (c) => {
 
 //Serve static files (*localdev, handled by CF static routing in production)
 // app.get('/static/*', serveStatic({ root: './' }))
-app.use('/static/*', serveStatic({ root: '../static' }))
+app.use('/static/*', serveStatic({ root: './dist' }))
 
 //Export
 export default app
