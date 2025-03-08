@@ -1,11 +1,8 @@
-//Imports
 import { serveStatic } from '@hono/node-server/serve-static'
 import { createApp } from 'honox/server'
 
-//Create app
 const app = createApp()
 
-//Serve HTML
 app.get('/', (c) => {
     return c.html(`
         <!DOCTYPE html>
@@ -24,9 +21,7 @@ app.get('/', (c) => {
      `)
 })
 
-//Serve static files (*localdev, handled by CF static routing in production)
-// app.get('/static/*', serveStatic({ root: './' }))
-app.use('/static/*', serveStatic({ root: './dist' }))
+app.use('/style.css', serveStatic({ path: './dist/style.css' }))
+app.use('/main.js', serveStatic({ path: './dist/main.js' }))
 
-//Export
 export default app
