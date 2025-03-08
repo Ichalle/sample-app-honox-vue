@@ -21,7 +21,8 @@ app.get('/', (c) => {
      `)
 })
 
-app.use('/style.css', serveStatic({ path: './dist/style.css' }))
-app.use('/main.js', serveStatic({ path: './dist/main.js' }))
+// app.use('/style.css', serveStatic({ path: './dist/style.css' }))
+// app.use('/main.js', serveStatic({ path: './dist/main.js' }))
+app.get('/static/*', serveStatic({ root: './' }))
 
 export default app
